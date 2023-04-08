@@ -10,7 +10,7 @@ const alertBtn = document.querySelector(".alert_btn");
 const input = document.querySelector("input");
 const modal_btn = document.querySelector(".modal_btn");
 const overlay = document.querySelector(".overlay");
-let color = "";
+let color = "black";
 let gridCells = 0;
 let click = false;
 
@@ -32,6 +32,7 @@ input.addEventListener("keypress", (event) => {
 modal_btn.addEventListener("click", () => {
   let inputNumber = document.getElementById("number").value * 1;
   validate(inputNumber);
+  populateBoard(inputNumber);
 });
 
 eraser.addEventListener("click", () => {
